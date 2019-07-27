@@ -11,6 +11,12 @@
 html {
   --cube-size: 1.5rem;
   height: 100vh;
+  --s: green; /* S */
+  --l: orangered; /* L */
+  --o: yellow; /* O */
+  --t: purple; /* T */
+  --z: red; /* Z */
+  --j: blue; /* J */
 }
 
 body {
@@ -22,66 +28,4 @@ body {
 main {
   display: grid;
   margin: auto;
-}
-
-.playfield {
-  display: grid;
-  margin: auto;
-  width: calc(10 * var(--cube-size));
-  height: calc(22 * var(--cube-size));
-  grid-template-columns: repeat(10, [x-start] var(--cube-size));
-  grid-template-rows: repeat(22, [y-start] var(--cube-size));
-  border: 1px solid rgba(0, 0, 65, 0.671);
-  margin: 0.5rem;
-}
-
-/* todo: work on rotations */
-tetromino.l {
-  display: grid;
-  grid-column-start: 3;
-  grid-row-start: 5;
-  
-  grid-template-columns: repeat(4, [x-start] var(--cube-size));
-  grid-template-rows: repeat(4, [y-start] var(--cube-size));
-  grid-template-areas:  "😎 . . ."
-                        "😎 . . ."
-                        "😎 😛 . ."
-                        ". . . .";
-  background: orangered;
-  color: orangered;
-}
-
-tetromino.i {
-  display: grid;
-  grid-column-start: 10;
-  grid-row-start: 5;
-
-  grid-template-columns: repeat(4, [x-start] var(--cube-size));
-  grid-template-rows: repeat(4, [y-start] var(--cube-size));
-  grid-template-areas:  "😎 . . ."
-                        "😎 . . ."
-                        "😎 . . ."
-                        "😎 . . .";
-  /* display: none; */
-  background: cyan;
-  color: cyan;
-  /* transform: rotateZ(45deg); */
-}
-
-/* b for block */
-.b {
-  display: block;
-  grid-area: 😎;
-  background: inherit;
-  color: inherit;
-}
-
-/* sadly grid-template-areas require entities to be in rows */
-/* so we hack jutty-out bits with c because c is after b */
-/* had to find a hack because using grid-template-areas to define */
-/* shapes with ascii art is too cool 😎 */
-.c {
-  grid-area: 😛;
-  background: inherit;
-  color: inherit;
 }

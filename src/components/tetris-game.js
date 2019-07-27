@@ -1,15 +1,22 @@
 import { element, renderer } from 'swiss'
 import { html, render } from 'lit-html'
-import { useState } from 'swiss/hooks'
+import './tetris-playfield'
 
-const component = (element) => {
+const component = element => {
   console.log(element)
-  const [count, setCount] = useState(0)
+  console.dir(element)
   
+  // tetromino names
+  // I, O, T, S, Z, J, L
   return html`
-    <h5>swiss-tetris web component!!</h5>
-    <button @click="${() => setCount(count + 1)}">clicked me ${count} times!</button>
+    <tetris-playfield></tetris-playfield>
   `
 }
 
 element('tetris-game', component, renderer(render))
+
+{/* <s-tetromino class="o">O</s-tetromino>
+<s-tetromino class="t">T</s-tetromino>
+<s-tetromino class="s">S</s-tetromino>
+<s-tetromino class="z">Z</s-tetromino>
+<s-tetromino class="j">J</s-tetromino> */}
