@@ -1,0 +1,28 @@
+{
+  "name": "tetris-grid",
+  "version": "1.0.0",
+  "description": "tetris as an experiment with css grid - swiss custom elements for the joy of it",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tetris",
+    "css grid",
+    "grid-template-areas",
+    "swiss",
+    "custom elements",
+    "web components"
+  ],
+  "author": "av8ta",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3"
+  },
+  "dependencies": {
+    "lit-html": "^1.1.1",
+    "swiss": "^1.1.3"
+  }
+}
