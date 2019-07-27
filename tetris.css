@@ -43,9 +43,9 @@ tetromino.l {
   
   grid-template-columns: repeat(4, [x-start] var(--cube-size));
   grid-template-rows: repeat(4, [y-start] var(--cube-size));
-  grid-template-areas:  "b . . ."
-                        "b . . ."
-                        "b c . ."
+  grid-template-areas:  "😎 . . ."
+                        "😎 . . ."
+                        "😎 😛 . ."
                         ". . . .";
   background: orangered;
   color: orangered;
@@ -58,19 +58,20 @@ tetromino.i {
 
   grid-template-columns: repeat(4, [x-start] var(--cube-size));
   grid-template-rows: repeat(4, [y-start] var(--cube-size));
-  grid-template-areas:  "b . . ."
-                        "b . . ."
-                        "b . . ."
-                        "b . . .";
+  grid-template-areas:  "😎 . . ."
+                        "😎 . . ."
+                        "😎 . . ."
+                        "😎 . . .";
   /* display: none; */
   background: cyan;
-  color: cyan;                        
+  color: cyan;
+  /* transform: rotateZ(45deg); */
 }
 
 /* b for block */
 .b {
   display: block;
-  grid-area: b;
+  grid-area: 😎;
   background: inherit;
   color: inherit;
 }
@@ -80,7 +81,7 @@ tetromino.i {
 /* had to find a hack because using grid-template-areas to define */
 /* shapes with ascii art is too cool 😎 */
 .c {
-  grid-area: c;
+  grid-area: 😛;
   background: inherit;
   color: inherit;
 }
