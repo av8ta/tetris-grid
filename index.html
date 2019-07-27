@@ -7,39 +7,31 @@
     <link rel="stylesheet" href="tetris.css" />
   </head>
   <body>
-    <header><h1>tetris with the awesomeness of css grid!</h1></header>
+    <header>
+      <h1>
+        tetris with the awesomeness of css grid!
+      </h1>
+    </header>
     <main>
       <!-- I, O, T, S, Z, J, L -->
-      <tetromino-i class="tetromino">I</tetromino-i>
-      <tetromino-o class="tetromino">O</tetromino-o>
-      <tetromino-t class="tetromino">T</tetromino-t>
-      <tetromino-s class="tetromino">S</tetromino-s>
-      <tetromino-z class="tetromino">Z</tetromino-z>
-      <tetromino-j class="tetromino">J</tetromino-j>
-      <tetromino-l class="tetromino">L</tetromino-l>
-      <!-- dummy spaces -->
-      <!-- <tetromino-x class="tetromino">X</tetromino-x> -->
-      <div id="spaces"></div>
+      <div class="playfield">
+        <tetromino class="i">
+          <block class="b"></block>
+        </tetromino>
+        <tetromino class="i" style="grid-column-start: 8; grid-row-start: 15;">
+          <block class="b"></block>
+        </tetromino>
+        <!-- <tetromino class="o">O</tetromino> -->
+        <!-- <tetromino class="t">T</tetromino> -->
+        <!-- <tetromino class="s">S</tetromino> -->
+        <!-- <tetromino class="z">Z</tetromino> -->
+        <!-- <tetromino class="j">J</tetromino> -->
+        <tetromino class="l">
+          <block class="b"></block>
+          <block class="c"></block>
+        </tetromino>
+      </div>
     </main>
-
     <footer>this is the footer</footer>
-    <script>
-      
-      function addSpaces(number) {
-        const insertLocation = document.getElementById('spaces')        
-        const main = document.querySelector('main')
-        for (let i = 0; i < number; i++) {
-          const space = document.createElement('tetromino-x')
-          space.className = 'tetromino'
-          const content = document.createTextNode('X')
-          space.appendChild(content)        
-          main.insertBefore(space, insertLocation)
-        }
-      }
-
-      document.addEventListener('DOMContentLoaded', function() {
-        addSpaces(213)
-      })
-    </script>
   </body>
 </html>
