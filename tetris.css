@@ -1,0 +1,34 @@
+/* I, O, T, S, Z, J, L */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  --cube-size: 1.5rem;
+  height: 100vh;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  margin: auto;
+  grid-template-rows: 3rem auto 3rem;
+  
+}
+
+main {
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(10, var(--cube-size));
+  grid-template-rows: repeat(22, var(--cube-size));
+}
+
+.tetromino {
+  background: cornflowerblue;
+  border: 1px solid rgba(0, 0, 0, 0.555);
+}
